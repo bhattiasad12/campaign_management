@@ -29,6 +29,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('campaigns', CampaignController::class)
-    ->only(['index', 'store'])
+    ->only(['index', 'create', 'store'])
     ->middleware(['auth', 'verified']);
 require __DIR__ . '/auth.php';
